@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:35:02 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/19 16:07:43 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/10/19 17:26:00 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int main()
     zombie.announce();
     zmbs = newZombie("Reda");
     zmbs->announce();
+    randomChump("miroka");
+    
     delete zmbs;
     // std::cout << zombie << std::endl;
     

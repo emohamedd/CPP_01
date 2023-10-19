@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:30:02 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/19 16:06:26 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/10/19 17:23:13 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 Zombie::Zombie(){
     this->name = "emohamed";
+}
+Zombie::Zombie(std::string name)
+{
+    this->name = name;
 }
 void Zombie::setName(std::string name){
     this->name = name;
@@ -23,7 +27,7 @@ std::string Zombie::getName(){
 }
 
 void Zombie::announce(){
-    std::cout << getName() << " BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << name << " BraiiiiiiinnnzzzZ..." << std::endl;
 }
 Zombie::~Zombie(){
             std::cout << name << " DELETED"  << std::endl;
