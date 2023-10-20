@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 12:21:46 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/20 15:03:29 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:25:54 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ int main(int ac, char **av) {
     std::ifstream inputFile(av[1]);
     std::string name = charToString(av[2]);
     std::string replace = charToString(av[3]);
+    if(inputFile.peek() == -1) {
+        // std::cout << inputFile.peek() << std::endl;
+        std::cout << "File is empty" << std::endl;
+        return 1;
+    }
 
     if (inputFile.is_open()) {
         std::ofstream outputFile("replaced.txt");
@@ -44,11 +49,13 @@ int main(int ac, char **av) {
         while (std::getline(inputFile, line)) {
             size_t start = 0;
             size_t end;
+            
             while ((end = line.find(name, start)) != std::string::npos) {
                 outputFile << line.substr(start, end - start);
                 outputFile << replace;
                 start = end + name.length();
             }
+            std::cout << line.find(name, start) << std::endl;
             if (line.find(name, start) == std::string::npos) {
                 std::cout << "Word Not found" << std::endl;
                 return 1;
