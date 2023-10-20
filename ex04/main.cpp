@@ -6,15 +6,12 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 12:21:46 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/20 15:02:30 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:03:29 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
-#include <iostream>
-#include <string>
-#include <fstream>
 std::string charToString(char* str) {
     if (str) {
         return std::string(str);
