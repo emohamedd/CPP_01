@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 12:32:18 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/21 12:50:35 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/10/21 21:52:59 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ private:
 public:
     void (Harl::*complaintFunction)();
     void complain(std::string level) {
-        std::string levels[4] = {"debug", "info", "warning", "error"};
+        std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
         int i = 0;
         while(i < 4)
         {
@@ -46,23 +46,37 @@ public:
             i++;
         }
         switch (i) {
+            std::cout << i << std::endl;
             case 0:
+            {
+                std::cout << "[ " << "DEBUG" << " ]" << std::endl;
                 complaintFunction = &Harl::debug;
-                break;
+                (this->*complaintFunction)();
+            }
             case 1:
+            {
+                std::cout << "[ " << "INFO" << " ]" << std::endl;
                 complaintFunction = &Harl::info;
-                break;
+                (this->*complaintFunction)();
+            }
             case 2:
+            {
+                std::cout << "[ " << "WARNING" << " ]" << std::endl;
                 complaintFunction = &Harl::warning;
-                break;
+                (this->*complaintFunction)();
+            }
             case 3:
+            {
+                std::cout << "[ " << "ERROR" << " ]" << std::endl;
                 complaintFunction = &Harl::error;
-                break;
+                (this->*complaintFunction)();
+            }
+            break;
             default:
-            std::cout << "This is a error" << std::endl;
+                std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
                 return;
         }
-        (this->*complaintFunction)();
+            
     }
 
 
