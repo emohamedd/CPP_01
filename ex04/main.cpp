@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 12:21:46 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/20 15:25:54 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/10/22 09:04:36 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,22 +46,17 @@ int main(int ac, char **av) {
 
         std::string line;
 
-        while (std::getline(inputFile, line)) {
-            size_t start = 0;
-            size_t end;
-            
-            while ((end = line.find(name, start)) != std::string::npos) {
-                outputFile << line.substr(start, end - start);
-                outputFile << replace;
-                start = end + name.length();
+                while (std::getline(inputFile, line)) {
+                size_t start = 0;
+                size_t end;
+                
+                while ((end = line.find(name, start)) != std::string::npos) {
+                    outputFile << line.substr(start, end - start);
+                    outputFile << replace;
+                    start = end + name.length();
+                }
+                outputFile << line.substr(start) << std::endl;
             }
-            std::cout << line.find(name, start) << std::endl;
-            if (line.find(name, start) == std::string::npos) {
-                std::cout << "Word Not found" << std::endl;
-                return 1;
-            }
-            outputFile << line.substr(start) << std::endl;
-        }
 
         inputFile.close();
         outputFile.close();
