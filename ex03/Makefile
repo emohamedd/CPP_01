@@ -1,7 +1,7 @@
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = Human
-SRCS = $(wildcard *.cpp)
+SRCS = HumanA.cpp HumanB.cpp Weapon.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

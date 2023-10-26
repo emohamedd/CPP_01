@@ -1,7 +1,7 @@
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = brain
-SRCS = $(wildcard *.cpp)
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

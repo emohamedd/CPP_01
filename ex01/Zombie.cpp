@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-maar <ael-maar@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:42:13 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/25 17:05:09 by ael-maar         ###   ########.fr       */
+/*   Updated: 2023/10/26 10:35:12 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ void Zombie::announce(){
     std::cout << name << " anounced" << std::endl;
 }
 Zombie::~Zombie(){
-    std::cout << name << " DELETED"  << std::endl;
+    std::cout << "------------" << name << " DELETED "<< "------------"   << std::endl;
 }

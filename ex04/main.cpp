@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 12:21:46 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/26 10:15:18 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/10/26 10:38:23 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int main(int ac, char **av) {
     std::string name = charToString(av[2]);
     std::string replace = charToString(av[3]);
     if(inputFile.peek() == -1) {
-        // std::cout << inputFile.peek() << std::endl;
         std::cout << "File is empty" << std::endl;
         return 1;
     }
