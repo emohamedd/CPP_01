@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ael-maar <ael-maar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:26:36 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/19 17:24:19 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/10/25 16:56:00 by ael-maar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class Zombie{
 private:
-        std::string name;
+    std::string name;
 public:
     Zombie();
     Zombie(std::string name);

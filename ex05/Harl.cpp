@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ael-maar <ael-maar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 08:36:23 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/22 08:41:17 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/10/25 17:24:18 by ael-maar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,14 @@ void Harl::error(void) {
 
 void Harl::complain(std::string level)
 {
-   void (Harl::*complaintFunction[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-        std::string levels[4] = {"debug", "info", "warning", "error"};
-        int i = 0;
+    void (Harl::*complaintFunction[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+    std::string levels[4] = {"debug", "info", "warning", "error"};
+    int i = 0;
 
-        while (i < 4) {
-            if (levels[i] == level) {
-                (this->*complaintFunction[i])();
-            }
-            i++;
+    while (i < 4) {
+        if (levels[i] == level) {
+            (this->*complaintFunction[i])();
         }
+        i++;
+    }
 }

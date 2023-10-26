@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ael-maar <ael-maar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 09:12:13 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/20 10:01:29 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/10/25 17:12:25 by ael-maar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@ HumanA::HumanA(std::string name, Weapon &wp) : weapon(wp){
 void HumanA::attack()
 {
     std::string type = weapon.getType();
-    // HumanA Humanb(this->name, wp);
-    std::cout << name << " attack with their " << type << std::endl; 
+    if (!type.empty())
+    {
+        std::cout << name << " attack with their " << type << std::endl; 
+        return;
+    }
+    std::cout << name << " doesn't have a weapon" << std::endl;
 }

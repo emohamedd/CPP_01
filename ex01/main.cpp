@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ael-maar <ael-maar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:49:43 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/25 15:46:08 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/10/25 17:02:40 by ael-maar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int main()
     Zombie *zmb;
     int n = 6;
     zmb = zombieHorde(n, "emmd");
-    for (int i; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         zmb[i].announce();
     }
-    // delete [] zmb;
+    delete [] zmb;
 }

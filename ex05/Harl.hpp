@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 22:11:23 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/22 08:41:24 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/10/26 10:16:16 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ private:
 
 public:
     void complain(std::string level);
-    void (Harl::*complaintFunction[4])();
 };
 
 

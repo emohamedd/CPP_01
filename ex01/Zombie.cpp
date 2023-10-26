@@ -3,21 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ael-maar <ael-maar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:42:13 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/19 17:57:35 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/10/25 17:05:09 by ael-maar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(){
-    this->name = "emohamed";
+Zombie::Zombie(): name("Emohammed") {
+    std::cout << "Default constructor called" << std::endl;
 }
 Zombie::Zombie(std::string name)
 {
     this->name = name;
+    std::cout << name << " CREATED" << std::endl;
 }
 void Zombie::setName(std::string name){
     this->name = name;
@@ -27,8 +28,8 @@ std::string Zombie::getName(){
 }
 
 void Zombie::announce(){
-    std::cout << &name << " BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << name << " anounced" << std::endl;
 }
 Zombie::~Zombie(){
-            std::cout << name << " DELETED"  << std::endl;
+    std::cout << name << " DELETED"  << std::endl;
 }

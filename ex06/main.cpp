@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 12:33:56 by emohamed          #+#    #+#             */
-/*   Updated: 2023/10/21 12:42:26 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/10/26 10:16:47 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,4 @@ int main(int c, char **v)
     harl.complain(v[1]);
     return (0);
     }
-    
 }
